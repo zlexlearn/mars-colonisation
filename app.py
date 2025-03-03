@@ -1,5 +1,5 @@
 import flask
-from flask import render_template, request
+from flask import render_template, request, redirect
 from flask_wtf import FlaskForm
 from wtforms.fields.simple import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired
@@ -69,8 +69,8 @@ def answer():
 def login():
     if request.method == "GET":
         return render_template('login.html', form=LoginForm())
-    elif request.method == 'POST':
-        ...
+    elif request.method == 'POST' and LoginForm().validate_on_submit():
+        return redirect('/')
 
 app.run('127.0.0.1', 5000)
 
