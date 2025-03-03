@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="login" method="POST">
+  {{ form.hidden_tag() }}
+  <div class="mb-3">
+    <label class="form-label" for="astronaut_id">
+      {{ form.astronaut_id.label }}
+    </label>
+    {{ form.astronaut_id(class="form-control", id="astronaut_id") }}
+  </div>
+  <div class="mb-3">
+    {{ form.access(class="btn btn-primary") }}
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if list == 'ul' %}
+<ul>
+    {% for prof in profs %}
+    <li>{{ prof }}</li>
+    {% endfor %}
+</ul>
+{% elif list == 'ol' %}
+<ol>
+    {% for prof in profs %}
+    <li>{{ prof }}</li>
+    {% endfor %}
+</ol>
+{% else %}
+<h5>Неверный запрос :(((</h5>
+{% endif %}
+{% endblock %}
