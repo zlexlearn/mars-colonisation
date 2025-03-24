@@ -76,3 +76,60 @@ class UserListResourse(Resource):
         s.add(user)
         s.commit()
         return jsonify({"user_id": user.id})
+
+
+# import requests as r
+#
+# url = 'http://127.0.0.1:8080/api/users'
+#
+# resp = r.post(url, json={
+#     'surname': 'bla bla bla',
+#     'name': 'bla bla bla',
+#     'age': 30,
+#     'position': 'dev',
+#     'speciality': 'back',
+#     'address': '123 psk msc',
+#     'email': 'a.b@123.com',
+#     'hashed_password': '123'
+# })
+# print(f"{resp.text}")
+#
+# resp = r.get(url)
+# print(f"{resp.text}")
+#
+# resp = r.get(f'{url}/1')
+# print(f"{resp.text}")
+#
+# resp = r.delete(f'{url}/1')
+# print(f"{resp.text}")
+#
+# resp = r.post(url, json={
+#     'surname': 'a',
+#     'name': 'b',
+#     'age': 'тридцать',  # str
+#     'position': 'dev',
+#     'speciality': 'backen',
+#     'address': '123 Main St',
+#     'email': 'ab.b@ex.com',
+#     'hashed_password': '123'
+# })
+# print(f"{resp.text}")
+#
+# resp = r.post(url, json={
+#     'surname': 'd',
+#     'name': 'asd',
+#     'age': 30,
+#     'position': 'dev',
+#     'speciality': 'backend',
+#     'address': '123 Main St',
+#     'email': 'ads.ads@asd.com',
+#     'hashed_password': 'dasd',
+#     'f': '123'
+# })
+# print(f"{resp.text}")
+#
+# resp = r.get(f'{url}/94032393013')  # 404
+# print(f"{resp.text}")
+#
+# resp = r.delete(f'{url}/89128391312')  # 404
+# print(f"{resp.text}")
